@@ -26,6 +26,8 @@ from ..configuration_utils import ConfigMixin, register_to_config
 from ..utils import _COMPATIBLE_STABLE_DIFFUSION_SCHEDULERS, BaseOutput, deprecate
 from .scheduling_utils import SchedulerMixin
 
+from einops import rearrange, repeat
+
 
 @dataclass
 # Copied from diffusers.schedulers.scheduling_ddpm.DDPMSchedulerOutput with DDPM->DDIM
@@ -321,9 +323,15 @@ class DDIMScheduler(SchedulerMixin, ConfigMixin):
                     variance_noise = torch.randn(model_output.shape, dtype=model_output.dtype, generator=generator)
                     variance_noise = variance_noise.to(device)
                 else:
+                    # a quick hack
+                    b, c, f, h, w = model_output.shape
+                    #variance_noise = torch.randn(
+                    #    model_output.shape, generator=generator, device=device, dtype=model_output.dtype
+                    #)
                     variance_noise = torch.randn(
-                        model_output.shape, generator=generator, device=device, dtype=model_output.dtype
+                        (b, c, h, w), generator=generator, device=device, dtype=model_output.dtype
                     )
+                    variance_noise = repeat(variance_noise, "b c h w -> b c f h w", f=f)
             variance = self._get_variance(timestep, prev_timestep) ** (0.5) * eta * variance_noise
 
             prev_sample = prev_sample + variance
