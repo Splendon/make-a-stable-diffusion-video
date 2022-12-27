@@ -3,6 +3,7 @@
 The demo gif is compressed to 256x256 and 12 frames for better network loading speed
 
 ![gif](examples/research_projects/make_a_stable_diffusion_video/assets/small.gif)
+![gif2](examples/research_projects/make_a_stable_diffusion_video/assets/gif_small_2.gif)
 
 ## What is this
 
