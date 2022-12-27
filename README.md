@@ -12,7 +12,7 @@ Adapt https://github.com/lucidrains/make-a-video-pytorch into https://github.com
 
 A pretrained model is available at [lxj616/make-a-stable-diffusion-video-timelapse](https://huggingface.co/lxj616/make-a-stable-diffusion-video-timelapse)
 
-The pretrained model is trained on 286 timelapse video clips mainly come from http://www.setvak.cz/setvak-cz.html (Martin Setvak) and others, trained at frames_length=25, with bfloat16 (not only new layer blocks, and the stable diffusion backbone too) and 8-bit adam
+The pretrained model is trained on 286 timelapse video clips mainly come from http://www.setvak.cz/setvak-cz.html (Martin Setvak) and others, trained at frames_length=25, with fp16 (not only new layer blocks, and the stable diffusion backbone too) and 8-bit adam
 
 ## Inference
 
