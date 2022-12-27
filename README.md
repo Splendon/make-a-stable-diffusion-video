@@ -18,6 +18,8 @@ The pretrained model is trained on 286 timelapse video clips mainly come from ht
 
 A example inference script is located at examples/research_projects/make_a_stable_diffusion_video/run_inference_video.py
 
+**If you observe objects it does not understand fades away like cloud, add prompt of the object to make it stay, but it will freeze**
+
 ```
 from diffusers import StableDiffusionVideoInpaintPipeline
 import torch
@@ -30,7 +32,7 @@ pipe = StableDiffusionVideoInpaintPipeline.from_pretrained(model_id, torch_dtype
 pipe.enable_xformers_memory_efficient_attention()
 pipe.enable_sequential_cpu_offload()
 
-# notice this is only the video prompt, must be cloudscape, because I only trained on that, do not mention the cat
+# notice this is only the video prompt, must be cloudscape, because I only trained on that, do not mention the cat (if it fades away, add cat prompt)
 prompts = ["a fantasy sureal painting of cityscape and cloudscape, trending on artstation, colorful vibrant"]
 
 # provide first frame, generated from elsewhere
