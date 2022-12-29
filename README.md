@@ -55,6 +55,15 @@ for p in prompts:
 
 ```
 
+## Training
+
+I used the train_dreambooth.py from https://github.com/lxj616/make-a-stable-diffusion-video/blob/main/examples/research_projects/dreambooth_inpaint/train_dreambooth_inpaint.py 
+
+and modified it according to my own environment,
+
+my modified script is uploaded to https://gist.github.com/lxj616/5134368f44aca837304530695ee100ea but it's really messy and hacky without comments, I bet you would be quicker if you modify from the original one compared to debug mine
+
+
 # Original readme from diffusers
 
 <p align="center">
