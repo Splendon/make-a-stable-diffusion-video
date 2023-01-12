@@ -15,6 +15,14 @@ A pretrained model is available at [lxj616/make-a-stable-diffusion-video-timelap
 
 The pretrained model is trained on 286 timelapse video clips mainly come from http://www.setvak.cz/setvak-cz.html (Martin Setvak) and others, trained at frames_length=25, with fp16 (not only new layer blocks, and the stable diffusion backbone too) and 8-bit adam
 
+## Additional dependencies
+
+Install https://github.com/HazyResearch/flash-attention for faster training and vram optimization (instead of xformers)
+
+However if you wish not to use this hack, just modify and comment out this line to use original qkv calculation instead, it will comsume more vram and much slower
+
+`out, _ = self.flash(qkv)`
+
 ## Inference
 
 A example inference script is located at examples/research_projects/make_a_stable_diffusion_video/run_inference_video.py
