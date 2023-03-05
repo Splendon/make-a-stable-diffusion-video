@@ -11,8 +11,8 @@ https://lxj616.github.io/jekyll/update/2023/03/05/make-a-longer-stable-diffusion
 
 If you have more than 24gb vram, and does not need my hacks to fit under 24gb vram, check out https://github.com/chavinlo/TempoFunk for easier use
 
-![gif3](examples/research_projects/make_a_stable_diffusion_video/assets/trump.gif)
-![gif4](examples/research_projects/make_a_stable_diffusion_video/assets/ironman.gif)
+![gif3](examples/research_projects/make_a_stable_diffusion_video/assets/trump_small.gif)
+![gif4](examples/research_projects/make_a_stable_diffusion_video/assets/ironman_small.gif)
 
 ## What is this
 
