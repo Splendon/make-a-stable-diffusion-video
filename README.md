@@ -5,6 +5,15 @@ The demo gif is compressed to 256x256 and 12 frames for better network loading s
 ![gif](examples/research_projects/make_a_stable_diffusion_video/assets/small.gif)
 ![gif2](examples/research_projects/make_a_stable_diffusion_video/assets/gif_small_2.gif)
 
+Update:
+
+https://lxj616.github.io/jekyll/update/2023/03/05/make-a-longer-stable-diffusion-video.html
+
+If you have more than 24gb vram, and does not need my hacks to fit under 24gb vram, check out https://github.com/chavinlo/TempoFunk for easier use
+
+![gif3](examples/research_projects/make_a_stable_diffusion_video/assets/trump.gif)
+![gif4](examples/research_projects/make_a_stable_diffusion_video/assets/ironman.gif)
+
 ## What is this
 
 Adapt https://github.com/lucidrains/make-a-video-pytorch into https://github.com/huggingface/diffusers stable diffusion model
